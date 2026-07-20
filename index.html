@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexusAI FAQ Chatbot</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <h1>NexusAI FAQ Chatbot</h1>
+      <p>Ask a question and get the most relevant FAQ answer using TF-IDF and cosine similarity.</p>
+    </header>
+
+    <main class="chat-card">
+      <div id="chat-box" class="chat-box">
+        <div class="message bot">
+          <div class="bubble">Hi! Ask me anything about NexusAI pricing, security, API, billing, or features.</div>
+        </div>
+      </div>
+
+      <form id="chat-form" class="chat-form">
+        <input id="question-input" type="text" placeholder="Type your question here..." autocomplete="off" required>
+        <button type="submit">Ask</button>
+      </form>
+
+      <section id="related-box" class="related-box hidden">
+        <h3>Related Questions</h3>
+        <ul id="related-list"></ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
